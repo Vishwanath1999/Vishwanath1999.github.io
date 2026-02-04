@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viswanathan Sankar | Doctoral Researcher</title>
     <style>
-        :root { --primary: #2c3e50; --accent: #3498db; --bg: #f8f9fa; --text: #333; }
-        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; }
-        header { background: var(--primary); color: white; padding: 4rem 2rem; text-align: center; }
-        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid white; object-fit: cover; margin-bottom: 1rem; background: #eee; }
-        .container { max-width: 950px; margin: -50px auto 50px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        h2 { border-bottom: 2px solid var(--accent); display: inline-block; margin-top: 2rem; color: var(--primary); }
-        .card { padding: 15px; border-left: 4px solid var(--accent); background: #f1f7ff; margin-bottom: 15px; }
-        .pub-item { margin-bottom: 1.5rem; font-size: 0.95rem; padding-left: 15px; border-left: 2px solid #eee; }
-        .pub-item strong { color: var(--primary); }
-        .skills-tag { display: inline-block; background: var(--primary); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; margin: 3px; }
-        .thesis-box { background: #fffdf0; border: 1px solid #f1e67f; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #ffffff; --text: #2c3e50; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); background: #f4f7f6; margin: 0; }
+        header { background: var(--primary); color: white; padding: 5rem 2rem; text-align: center; }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2); object-fit: cover; margin-bottom: 1.5rem; background: #334455; }
+        .container { max-width: 900px; margin: -60px auto 60px; background: white; padding: 50px; border-radius: 8px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        h1 { margin: 0; font-size: 2.8rem; letter-spacing: -1px; }
+        h2 { border-bottom: 2px solid var(--accent); display: inline-block; margin-top: 2.5rem; color: var(--primary); text-transform: uppercase; font-size: 1.2rem; letter-spacing: 1px; }
+        p.bio { font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; }
+        .card { padding: 15px; border-left: 4px solid var(--accent); background: #f9f9f9; margin-bottom: 15px; }
+        .pub-item { margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.5; color: #444; }
+        .pub-item strong { color: var(--primary); display: block; margin-bottom: 3px; }
+        .skills-tag { display: inline-block; border: 1px solid var(--accent); color: var(--accent); padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; margin: 4px; font-weight: 600; }
+        .thesis-box { background: #fffdf0; border: 1px solid #f1e67f; padding: 25px; border-radius: 6px; margin: 25px 0; }
+        footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
@@ -23,11 +26,19 @@
 <header>
     <img src="profile.jpeg" alt="Viswanathan Sankar" class="profile-img">
     <h1>Viswanathan Sankar</h1>
-    <p>Doctoral Researcher at Technical University of Denmark [cite: 3]</p>
-    <p>PhD Title: Machine Learning based frequency comb generation in Micro-Ring Resonators [cite: 4]</p>
+    <p style="font-size: 1.2rem; opacity: 0.9;">Doctoral Researcher in Photonics & Machine Learning</p>
 </header>
 
 <div class="container">
+    <section>
+        <h2>About Me</h2>
+        <p class="bio">
+            I am a Doctoral Researcher at the <strong>Technical University of Denmark (DTU)</strong>, specializing in the intersection of Photonics and Artificial Intelligence[cite: 3, 51]. My research focuses on developing Machine Learning-based frequency comb generation in Micro-Ring Resonators[cite: 4, 51]. 
+            <br><br>
+            Prior to joining DTU, I served as a Junior Research Fellow at <strong>DRDO CHESS</strong>, where I developed Reinforcement Learning control frameworks for Tiled Aperture Coherent Beam Combining systems—technology with critical applications in defense and high-power laser systems[cite: 52, 53, 55]. I hold an M.S. in Electrical Engineering from <strong>IIT Madras</strong> (CGPA: 9.13/10.0), where my thesis work successfully validated phase control algorithms for large-scale laser arrays[cite: 5, 10, 14, 32]. I am deeply interested in leveraging Deep Reinforcement Learning to solve complex physical and scientific challenges[cite: 16].
+        </p>
+    </section>
+
     <section>
         <h2>Education</h2>
         <div class="card">
@@ -42,90 +53,94 @@
     </section>
 
     <section>
-        <h2>Masters Thesis</h2>
+        <h2>Research Highlights</h2>
         <div class="thesis-box">
-            <strong>Phase control algorithm using Reinforcement Learning for Tiled Aperture Coherent Beam Combining System [cite: 14]</strong>
-            <p>Developed a Deep RL framework to control phases of hundreds of laser beams for high-power applications including defense, solar sails, and nuclear fusion[cite: 15, 16].</p>
+            <h3 style="margin-top:0;">Masters Thesis: RL for Laser Beam Combining</h3>
+            <p>Developed and deployed a robust phase control algorithm using Reinforcement Learning for Tiled Aperture Coherent Beam Combining Systems[cite: 14]. This work addressed the control of phases across hundreds of laser beams to achieve high-intensity outputs for defense and nuclear fusion applications[cite: 15].</p>
         </div>
     </section>
 
     <section>
-        <h2>Publications</h2>
+        <h2>Full Publication List</h2>
         
         <div class="pub-item">
-            <strong>Reinforcement Learning for Soliton Generation in Micro-Ring Resonators</strong><br>
+            <strong>Reinforcement Learning for Soliton Generation in Micro-Ring Resonators</strong>
             V. Sankar, C. Peucheret and D. Zibar, 2025 IEEE Photonics Conference (IPC), Singapore[cite: 18].
         </div>
 
         <div class="pub-item">
-            <strong>Off-center feedback-based phase synchronization for tiled array coherent beam combination</strong><br>
+            <strong>Off-center feedback-based phase synchronization for tiled array coherent beam combination</strong>
             Sooraj, M. S., Maji, S., Bharadwaj, A., Sankar, V., & Srinivasan, B., Optics & Laser Technology, 2025[cite: 19, 20].
         </div>
 
         <div class="pub-item">
-            <strong>Investigation on the effect of transverse phase error in tiled-array based coherent beam combining</strong><br>
+            <strong>Investigation on the effect of transverse phase error in tiled-array based coherent beam combining</strong>
             Maji, S., Sankar, V., Sooraj, M. S., Linslal, C. L., et al., Optics & Laser Technology, 2025[cite: 21, 22].
         </div>
 
         <div class="pub-item">
-            <strong>Experimental Validation of Beam Pointing Error in Tiled-Array Coherent Beam Combining</strong><br>
+            <strong>Experimental Validation of Beam Pointing Error in Tiled-Array Coherent Beam Combining</strong>
             Maji, S., Sankar, V., et al., CLEO-PR, IEEE, 2024[cite: 23, 24, 25].
         </div>
 
         <div class="pub-item">
-            <strong>Performance Investigation of Dual Stage Nested Loop Configuration for Scalable Coherent Beam Combination</strong><br>
+            <strong>Performance Investigation of Dual Stage Nested Loop Configuration for Scalable Coherent Beam Combination</strong>
             Sooraj, M. S., Maji, S., Sankar, V., et al., CLEO: Applications and Technology, 2024[cite: 26, 27, 28].
         </div>
 
         <div class="pub-item">
-            <strong>Device dependent distortion correction in time-stretch photonic analog to digital converters using deep neural networks</strong><br>
+            <strong>Device dependent distortion correction in time-stretch photonic analog to digital converters using deep neural networks</strong>
             Singh, M., Dutta, J., Sreeraj, S. J., Sankar, V., et al., OFC, 2024[cite: 29, 30, 31].
         </div>
 
         <div class="pub-item">
-            <strong>Nested Loop Phase Control Algorithm for Hybrid Coherent Beam Combining: Simulation and Experimental Validation</strong><br>
+            <strong>Nested Loop Phase Control Algorithm for Hybrid Coherent Beam Combining: Simulation and Experimental Validation</strong>
             Viswanathan Sankar, S.Maji, et al., Frontiers in Optics and Laser Science, 2023[cite: 32, 33].
         </div>
 
         <div class="pub-item">
-            <strong>Reinforcement Learning Based Phase Control for Hexagonal Tiled Aperture Beam Combining</strong><br>
+            <strong>Reinforcement Learning Based Phase Control for Hexagonal Tiled Aperture Beam Combining</strong>
             Viswanathan Sankar, S.Maji, et al., Conference on Photonics and Quantum Optics (IIT Roorkee), 2022[cite: 34, 35].
         </div>
 
         <div class="pub-item">
-            <strong>Investigation of Pointing Error Tolerance of Fermat Spiral Array-based Coherent Beam Combining</strong><br>
+            <strong>Investigation of Pointing Error Tolerance of Fermat Spiral Array-based Coherent Beam Combining</strong>
             Viswanathan Sankar, S.Maji, et al., Frontiers in Optics and Laser Science, 2022[cite: 36, 37, 38].
         </div>
 
         <div class="pub-item">
-            <strong>Investigations on the effect of PER mismatch on coherent beam combining</strong><br>
+            <strong>Investigations on the effect of PER mismatch on coherent beam combining</strong>
             C. L. Linslal, S. Maji, M. S. Sooraj, V. Sankar, et al., Advanced Solid State Lasers Conference, 2022[cite: 39, 40].
         </div>
 
         <div class="pub-item">
-            <strong>Challenges and opportunities in distributed anti-stokes raman thermometry</strong><br>
+            <strong>Challenges and opportunities in distributed anti-stokes raman thermometry</strong>
             A. Datta, Sankar, Viswanathan, and B. Srinivasan, ISSS Journal of Micro and Smart Systems, 2022[cite: 41, 42].
         </div>
 
         <div class="pub-item">
-            <strong>Measurement accuracy enhancement with multi-event detection using the deep learning approach in raman distributed temperature sensors</strong><br>
+            <strong>Measurement accuracy enhancement with multi-event detection using the deep learning approach in raman distributed temperature sensors</strong>
             A. Datta, V. Raj, Sankar, Viswanathan, et al., Optics Express, 2021[cite: 43, 44].
         </div>
 
         <div class="pub-item">
-            <strong>Investigation of variation in measured temperature across different fibers in optical phase conductor cable using distributed anti-stokes raman thermometry</strong><br>
+            <strong>Investigation of variation in measured temperature across different fibers in optical phase conductor cable using distributed anti-stokes raman thermometry</strong>
             A. Datta, Viswanathan S, and B. Srinivasan, Optical Fiber Sensors Conference, 2020[cite: 45, 46].
         </div>
     </section>
 
     <section>
-        <h2>Technical Skills</h2>
+        <h2>Technical Expertise</h2>
         <div>
-            <span class="skills-tag">Python</span> <span class="skills-tag">MATLAB</span> <span class="skills-tag">C/C++</span> 
-            <span class="skills-tag">PyTorch</span> <span class="skills-tag">TensorFlow</span> <span class="skills-tag">JAX</span>
-            <span class="skills-tag">WandB</span> <span class="skills-tag">NI DAQmx</span> <span class="skills-tag">COMSOL Multiphysics</span> [cite: 77, 78]
+            <span class="skills-tag">Python</span> <span class="skills-tag">PyTorch</span> <span class="skills-tag">JAX</span> 
+            <span class="skills-tag">MATLAB</span> <span class="skills-tag">COMSOL Multiphysics</span> <span class="skills-tag">Deep RL</span>
+            <span class="skills-tag">WandB</span> <span class="skills-tag">NI DAQmx</span> <span class="skills-tag">LaTeX</span> [cite: 77, 78]
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2026 Viswanathan Sankar | Technical University of Denmark</p>
+    </footer>
 </div>
 
 </body>
