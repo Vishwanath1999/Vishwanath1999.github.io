@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="profile-header">
                     <div class="profile-image">
-                        <img src="profile.jpg" alt="Viswanathan" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-circle\'><span>Photo</span></div>';">
+                        <img src="profile.jpg" alt="Viswanathan">
                     </div>
                     <div class="profile-info">
                         <h1>Viswanathan</h1>
@@ -140,8 +140,24 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Viswanathan. All rights reserved.</p>
+            <p>&copy; 2026 Viswanathan. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Handle profile image error gracefully
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileImg = document.querySelector('.profile-image img');
+            if (profileImg) {
+                profileImg.addEventListener('error', function() {
+                    this.style.display = 'none';
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'placeholder-circle';
+                    placeholder.innerHTML = '<span>Photo</span>';
+                    this.parentElement.appendChild(placeholder);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
