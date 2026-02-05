@@ -10,37 +10,22 @@
         :root { --primary: #1a2a3a; --accent: #3498db; --bg: #ffffff; --text: #2c3e50; }
         body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); background: #f4f7f6; margin: 0; }
         header { background: var(--primary); color: white; padding: 4rem 2rem; text-align: center; }
-        
         .profile-img { width: 170px; height: 170px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2); object-fit: cover; margin-bottom: 1.5rem; background: #334455; }
-        
         .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-        .social-btn { 
-            display: inline-flex; align-items: center; background: rgba(255,255,255,0.1); color: white; 
-            padding: 8px 16px; border-radius: 30px; text-decoration: none; font-weight: 600;
-            transition: 0.3s; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.3);
-        }
+        .social-btn { display: inline-flex; align-items: center; background: rgba(255,255,255,0.1); color: white; padding: 8px 16px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: 0.3s; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.3); }
         .social-btn:hover { background: var(--accent); transform: translateY(-2px); border-color: var(--accent); }
         .social-btn i { margin-right: 8px; font-size: 1rem; }
-        
-        .scholar { background: #4285f4; }
-        .orcid { background: #a6ce39; }
-        .linkedin { background: #0077b5; }
-        .github { background: #333; }
-
+        .scholar { background: #4285f4; } .orcid { background: #a6ce39; } .linkedin { background: #0077b5; } .github { background: #333; }
         .container { max-width: 900px; margin: -60px auto 60px; background: white; padding: 50px; border-radius: 8px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
         h2 { border-bottom: 2px solid var(--accent); display: inline-block; margin-top: 2.5rem; color: var(--primary); text-transform: uppercase; font-size: 1.1rem; letter-spacing: 1px; }
-        
-        .pub-scroll-container { 
-            height: 500px; overflow-y: scroll; border: 1px solid #eee; 
-            padding: 25px; border-radius: 8px; background: #fafafa; margin-top: 15px;
-        }
-        .pub-item { margin-bottom: 1.2rem; font-size: 0.9rem; line-height: 1.6; color: #444; border-bottom: 1px solid #eee; padding-bottom: 12px; list-style-type: none; }
-        .pub-item:last-child { border-bottom: none; }
-
-        .card { padding: 15px; border-left: 4px solid var(--accent); background: #f9f9f9; margin-bottom: 15px; }
+        .exp-item { margin-bottom: 25px; }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; font-weight: bold; color: var(--primary); }
+        .exp-sub { display: flex; justify-content: space-between; font-style: italic; color: #666; font-size: 0.95rem; margin-bottom: 8px; }
+        .pub-scroll-container { height: 450px; overflow-y: scroll; border: 1px solid #eee; padding: 25px; border-radius: 8px; background: #fafafa; margin-top: 15px; }
+        .pub-item { margin-bottom: 1.2rem; font-size: 0.9rem; border-bottom: 1px solid #eee; padding-bottom: 12px; }
         .skills-tag { display: inline-block; border: 1px solid var(--accent); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; margin: 3px; font-weight: 600; }
-        .highlight-box { background: #fffdf0; border: 1px solid #f1e67f; padding: 25px; border-radius: 6px; margin: 25px 0; }
-        footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #eee; font-size: 0.9rem; }
+        footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #eee; }
+        ul { padding-left: 20px; margin: 5px 0; }
     </style>
 </head>
 <body>
@@ -48,21 +33,12 @@
 <header>
     <img src="profile.jpeg" alt="Viswanathan Sankar" class="profile-img">
     <h1>Viswanathan Sankar</h1>
-    <p style="font-size: 1.2rem; opacity: 0.9; margin: 10px 0 0 0;">Doctoral Researcher at Technical University of Denmark</p>
-    
+    <p style="font-size: 1.2rem; opacity: 0.9; margin: 10px 0;">Doctoral Researcher at Technical University of Denmark</p>
     <div class="social-links">
-        <a href="https://scholar.google.com/citations?user=SgSM_XMAAAAJ&hl=en" target="_blank" class="social-btn scholar">
-            <i class="ai ai-google-scholar"></i> Scholar
-        </a>
-        <a href="https://orcid.org/0000-0002-0394-4985" target="_blank" class="social-btn orcid">
-            <i class="ai ai-orcid"></i> ORCID
-        </a>
-        <a href="https://linkedin.com/in/viswanathan-sankar" target="_blank" class="social-btn linkedin">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/Vishwanath1999" target="_blank" class="social-btn github">
-            <i class="fab fa-github"></i> GitHub
-        </a>
+        <a href="https://scholar.google.com/citations?user=SgSM_XMAAAAJ&hl=en" target="_blank" class="social-btn scholar"><i class="ai ai-google-scholar"></i> Scholar</a>
+        <a href="https://orcid.org/0000-0002-0394-4985" target="_blank" class="social-btn orcid"><i class="ai ai-orcid"></i> ORCID</a>
+        <a href="https://linkedin.com/in/viswanathan-sankar" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/Vishwanath1999" target="_blank" class="social-btn github"><i class="fab fa-github"></i> GitHub</a>
     </div>
 </header>
 
@@ -70,62 +46,79 @@
     <section>
         <h2>About Me</h2>
         <p style="text-align: justify;">
-            I am a Doctoral Researcher at the <strong>Technical University of Denmark (DTU)</strong> within the Department of Photonics. My research expertise lies at the intersection of Photonics and Machine Learning, specifically focusing on frequency comb generation in Micro-Ring Resonators. 
-            <br><br>
-            With a strong foundation in Reinforcement Learning and Optical Sensing, I have previously worked at <strong>DRDO CHESS</strong> and <strong>IIT Madras</strong> on high-power laser systems and smart power grid applications. I am passionate about applying advanced AI architectures to solve complex scientific and physical problems.
+            I am a Doctoral Researcher at the <strong>Technical University of Denmark (DTU)</strong> within the Department of Photonics. My research focuses on Machine Learning based frequency comb generation in Micro-Ring Resonators. I am passionate about applying advanced AI architectures to solve complex scientific and physical problems.
         </p>
     </section>
 
     <section>
+        <h2>Experience</h2>
+        <div class="exp-item">
+            <div class="exp-header"><span>Research Assistant</span><span>July 2024 - June 2025</span></div>
+            <div class="exp-sub"><span>Technical University of Denmark</span><span>Lyngby, Copenhagen</span></div>
+            <p>Working on application of Machine Learning for Micro-resonator based frequency comb modelling.</p>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header"><span>Junior Research Fellow</span><span>July 2021 - June 2024</span></div>
+            <div class="exp-sub"><span>DRDO CHESS</span><span>Hyderabad, India</span></div>
+            <ul>
+                <li>Model a Reinforcement Learning based phase control algorithm for Coherent Beam Combining in a Tiled Aperture Configuration.</li>
+                <li>Develop a custom GUI to measure beam pointing error in real-time and measure its effects on the combining efficiency.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header"><span>Teaching Assistant</span><span>June 2021 - Oct 2021</span></div>
+            <div class="exp-sub"><span>NPTEL</span><span>IIT Madras, India</span></div>
+            <p>Teaching Assistant for Introduction to Photonics Course.</p>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header"><span>Project Associate</span><span>June 2020 - July 2021</span></div>
+            <div class="exp-sub"><span>IIT Madras</span><span>Chennai, India</span></div>
+            <p>Worked on Partial Discharge Classification in Transformers with Flourescent Fiber using Deep Learning.</p>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header"><span>Research Intern</span><span>Aug 2019 - May 2020</span></div>
+            <div class="exp-sub"><span>IIT Madras</span><span>Chennai, India</span></div>
+            <ul>
+                <li>Worked on Deep Learning Algorithms for extraction of clean temperature data from OPGW/OPC cables for smart power grid applications using Reference free real-time Distributed Anti-Stokes Raman Thermometry.</li>
+                <li>Finite Element Analysis of current induced thermal distribution for OPC (Optical Phase Conductors) using COMSOL Multiphysics.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
         <h2>Education</h2>
-        <div class="card">
-            <strong>PhD, Photonics</strong> | Technical University of Denmark | 2025 – 2028
-        </div>
-        <div class="card">
-            <strong>M.S., Electrical Engineering</strong> | IIT Madras | 2021 – 2024 | CGPA: 9.13/10.0
-        </div>
-        <div class="card">
-            <strong>B.Eng, Electronics and Communication Engineering</strong> | Anna University | 2016 – 2020 | CGPA: 8.05/10.0
-        </div>
+        <div class="card"><strong>PhD, Photonics</strong> | Technical University of Denmark | 2025 – 2028</div>
+        <div class="card"><strong>M.S., Electrical Engineering</strong> | IIT Madras | 2021 – 2024 | CGPA: 9.13/10.0</div>
+        <div class="card"><strong>B.Eng, Electronics and Communication Engineering</strong> | Anna University | 2016 – 2020 | CGPA: 8.05/10.0</div>
     </section>
 
     <section>
         <h2>Publications</h2>
         <div class="pub-scroll-container">
             <div class="pub-item"><strong>V. Sankar</strong>, C. Peucheret and D. Zibar, "Reinforcement Learning for Soliton Generation in Micro-Ring Resonators," 2025 IEEE Photonics Conference (IPC), Singapore, Singapore, 2025, pp. 1-2, doi: 10.1109/IPC65510.2025.11282300.</div>
-
             <div class="pub-item">Sooraj, M. S., Maji, S., Bharadwaj, A., <strong>Sankar, V.</strong>, & Srinivasan, B. (2025). Off-center feedback-based phase synchronization for tiled array coherent beam combination. Optics & Laser Technology, 192, 113759.</div>
-
             <div class="pub-item">Maji, S., <strong>Sankar, V.</strong>, Sooraj, M. S., Linslal, C. L., Bharadwaj, A., & Srinivasan, B. (2025). Investigation on the effect of transverse phase error in tiled-array based coherent beam combining. Optics & Laser Technology, 185, 112429.</div>
-
             <div class="pub-item">Maji, S., <strong>Sankar, V.</strong>, Linslal, C. L., Sooraj, M. S., & Srinivasan, B. (2024, August). Experimental Validation of Beam Pointing Error in Tiled-Array Coherent Beam Combining. In 2024 Conference on Lasers and Electro-Optics Pacific Rim (CLEO-PR) (pp. 1-4). IEEE.</div>
-
             <div class="pub-item">Sooraj, M. S., Maji, S., <strong>Sankar, V.</strong>, Linslal, C. L., Venkitesh, D., & Srinivasan, B. (2024, May). Performance Investigation of Dual Stage Nested Loop Configuration for Scalable Coherent Beam Combination. In CLEO: Applications and Technology (pp. JTu2A-23). Optica Publishing Group.</div>
-
             <div class="pub-item">Singh, M., Dutta, J., Sreeraj, S. J., <strong>Sankar, V.</strong>, Srinivasan, B., Theagarajan, L. N., & Venkitesh, D. (2024, March). Device dependent distortion correction in time-stretch photonic analog to digital converters using deep neural networks. In Optical Fiber Communication Conference (pp. M4C-6). Optica Publishing Group.</div>
-
             <div class="pub-item"><strong>Viswanathan Sankar</strong>, S.Maji, Linslal C.L., Sooraj M.S., B. Srinivasan. Nested Loop Phase Control Algorithm for Hybrid Coherent Beam Combining: Simulation and Experimental Validation. In Frontiers in Optics and Laser Science 2023, Optica.</div>
-
             <div class="pub-item"><strong>Viswanathan Sankar</strong>, S.Maji, Linslal C.L., Sooraj M.S., B. Srinivasan. Reinforcement Learning Based Phase Control for Hexagonal Tiled Aperture Beam Combining. In conference on Photonics and Quantum Optics (IIT Roorkee), 2022.</div>
-
             <div class="pub-item"><strong>Viswanathan Sankar</strong>, S.Maji, Linslal C.L., Sooraj M.S., Deepa Venkitesh, B. Srinivasan. Investigation of Pointing Error Tolerance of Fermat Spiral Array-based Coherent Beam Combining. In Frontiers in Optics and Laser Science 2022, Optica.</div>
-
             <div class="pub-item">C. L. Linslal, S. Maji, M. S. Sooraj, <strong>V. Sankar</strong>, D. Venkitesh, and B. Srinivasan. Investigations on the effect of PER mismatch on coherent beam combining. Advanced Solid State Lasers Conference, Optica 2022.</div>
-
             <div class="pub-item">A. Datta, <strong>Sankar, Viswanathan</strong>, and B. Srinivasan. Challenges and opportunities in distributed anti-stokes raman thermometry. ISSS Journal of Micro and Smart Systems, pages 1–28, 2022.</div>
-
             <div class="pub-item">A. Datta, V. Raj, <strong>Sankar, Viswanathan</strong>, S. Kalyani, and B. Srinivasan. Measurement accuracy enhancement with multi-event detection using the deep learning approach in raman distributed temperature sensors. Optics Express, 29(17):26745–26764, 2021.</div>
-
-            <div class="pub-item">A. Datta, <strong>Viswanathan S</strong>, and B. Srinivasan. Investigation of variation in measured temperature across different fibers in optical phase conductor cable using distributed anti-stokes raman thermometry. In Optical Fiber Sensors Conference 2020 Special Edition, page T3.82. Optica Publishing Group, 2020.</div>
+            <div class="pub-item">A. Datta, <strong>Viswanathan S</strong>, and B. Srinivasan. Investigation of variation in measured temperature across different fibers in optical phase conductor cable using distributed anti-stokes raman thermometry. In OFS Conference 2020.</div>
         </div>
     </section>
 
     <section>
         <h2>Technical Expertise</h2>
         <div>
-            <span class="skills-tag">Python</span> <span class="skills-tag">PyTorch</span> <span class="skills-tag">JAX</span> 
-            <span class="skills-tag">MATLAB</span> <span class="skills-tag">COMSOL</span> <span class="skills-tag">Deep RL</span>
-            <span class="skills-tag">WandB</span> <span class="skills-tag">NI DAQmx</span> <span class="skills-tag">TensorFlow</span>
+            <span class="skills-tag">Python</span><span class="skills-tag">PyTorch</span><span class="skills-tag">JAX</span><span class="skills-tag">MATLAB</span><span class="skills-tag">COMSOL</span><span class="skills-tag">Deep RL</span><span class="skills-tag">WandB</span><span class="skills-tag">NI DAQmx</span><span class="skills-tag">TensorFlow</span>
         </div>
     </section>
 
