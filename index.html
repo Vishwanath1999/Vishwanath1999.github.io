@@ -22,7 +22,6 @@
         .social-btn:hover { background: var(--accent); transform: translateY(-2px); border-color: var(--accent); }
         .social-btn i { margin-right: 8px; font-size: 1rem; }
         
-        /* Branding Colors */
         .scholar { background: #4285f4; }
         .orcid { background: #a6ce39; }
         .linkedin { background: #0077b5; }
@@ -32,18 +31,16 @@
         h2 { border-bottom: 2px solid var(--accent); display: inline-block; margin-top: 2.5rem; color: var(--primary); text-transform: uppercase; font-size: 1.1rem; letter-spacing: 1px; }
         
         .pub-scroll-container { 
-            height: 450px; overflow-y: scroll; border: 1px solid #eee; 
-            padding: 20px; border-radius: 8px; background: #fafafa; margin-top: 15px;
+            height: 500px; overflow-y: scroll; border: 1px solid #eee; 
+            padding: 25px; border-radius: 8px; background: #fafafa; margin-top: 15px;
         }
-        .pub-item { margin-bottom: 1.5rem; font-size: 0.92rem; line-height: 1.5; color: #444; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .pub-item { margin-bottom: 1.2rem; font-size: 0.9rem; line-height: 1.6; color: #444; border-bottom: 1px solid #eee; padding-bottom: 12px; list-style-type: none; }
         .pub-item:last-child { border-bottom: none; }
-        .pub-item strong { color: var(--primary); display: block; margin-bottom: 3px; }
 
         .card { padding: 15px; border-left: 4px solid var(--accent); background: #f9f9f9; margin-bottom: 15px; }
         .skills-tag { display: inline-block; border: 1px solid var(--accent); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; margin: 3px; font-weight: 600; }
         .highlight-box { background: #fffdf0; border: 1px solid #f1e67f; padding: 25px; border-radius: 6px; margin: 25px 0; }
         footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #eee; font-size: 0.9rem; }
-        ul { padding-left: 20px; }
     </style>
 </head>
 <body>
@@ -93,29 +90,33 @@
     </section>
 
     <section>
-        <h2>Masters Thesis Highlight</h2>
-        <div class="highlight-box">
-            <strong>Reinforcement Learning for Tiled Aperture Coherent Beam Combining</strong>
-            <p>I developed a Deep Reinforcement Learning framework to control the phases of hundreds of laser beams for coherent combining. This research supports high-power laser applications including defense and nuclear fusion.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Full Publication List</h2>
+        <h2>Publications</h2>
         <div class="pub-scroll-container">
-            <div class="pub-item"><strong>Reinforcement Learning for Soliton Generation in Micro-Ring Resonators</strong>, 2025 IEEE Photonics Conference (IPC).</div>
-            <div class="pub-item"><strong>Off-center feedback-based phase synchronization for tiled array coherent beam combination</strong>, Optics & Laser Technology, 2025.</div>
-            <div class="pub-item"><strong>Investigation on the effect of transverse phase error in tiled-array based coherent beam combining</strong>, Optics & Laser Technology, 2025.</div>
-            <div class="pub-item"><strong>Experimental Validation of Beam Pointing Error in Tiled-Array Coherent Beam Combining</strong>, CLEO-PR, IEEE, 2024.</div>
-            <div class="pub-item"><strong>Performance Investigation of Dual Stage Nested Loop Configuration for Scalable Coherent Beam Combination</strong>, CLEO: Applications and Technology, 2024.</div>
-            <div class="pub-item"><strong>Device dependent distortion correction in time-stretch photonic ADCs using deep neural networks</strong>, OFC, 2024.</div>
-            <div class="pub-item"><strong>Nested Loop Phase Control Algorithm for Hybrid Coherent Beam Combining</strong>, Frontiers in Optics, 2023.</div>
-            <div class="pub-item"><strong>Reinforcement Learning Based Phase Control for Hexagonal Tiled Aperture Beam Combining</strong>, Photonics and Quantum Optics, 2022.</div>
-            <div class="pub-item"><strong>Investigation of Pointing Error Tolerance of Fermat Spiral Array-based Coherent Beam Combining</strong>, Frontiers in Optics, 2022.</div>
-            <div class="pub-item"><strong>Investigations on the effect of PER mismatch on coherent beam combining</strong>, ASSL Conference, 2022.</div>
-            <div class="pub-item"><strong>Challenges and opportunities in distributed anti-stokes raman thermometry</strong>, ISSS Journal, 2022.</div>
-            <div class="pub-item"><strong>Measurement accuracy enhancement with multi-event detection using deep learning in Raman DTS</strong>, Optics Express, 2021.</div>
-            <div class="pub-item"><strong>Investigation of variation in measured temperature across different fibers in OPC cables</strong>, Optical Fiber Sensors Conference, 2020.</div>
+            <div class="pub-item"><strong>V. Sankar</strong>, C. Peucheret and D. Zibar, "Reinforcement Learning for Soliton Generation in Micro-Ring Resonators," 2025 IEEE Photonics Conference (IPC), Singapore, Singapore, 2025, pp. 1-2, doi: 10.1109/IPC65510.2025.11282300.</div>
+
+            <div class="pub-item">Sooraj, M. S., Maji, S., Bharadwaj, A., <strong>Sankar, V.</strong>, & Srinivasan, B. (2025). Off-center feedback-based phase synchronization for tiled array coherent beam combination. Optics & Laser Technology, 192, 113759.</div>
+
+            <div class="pub-item">Maji, S., <strong>Sankar, V.</strong>, Sooraj, M. S., Linslal, C. L., Bharadwaj, A., & Srinivasan, B. (2025). Investigation on the effect of transverse phase error in tiled-array based coherent beam combining. Optics & Laser Technology, 185, 112429.</div>
+
+            <div class="pub-item">Maji, S., <strong>Sankar, V.</strong>, Linslal, C. L., Sooraj, M. S., & Srinivasan, B. (2024, August). Experimental Validation of Beam Pointing Error in Tiled-Array Coherent Beam Combining. In 2024 Conference on Lasers and Electro-Optics Pacific Rim (CLEO-PR) (pp. 1-4). IEEE.</div>
+
+            <div class="pub-item">Sooraj, M. S., Maji, S., <strong>Sankar, V.</strong>, Linslal, C. L., Venkitesh, D., & Srinivasan, B. (2024, May). Performance Investigation of Dual Stage Nested Loop Configuration for Scalable Coherent Beam Combination. In CLEO: Applications and Technology (pp. JTu2A-23). Optica Publishing Group.</div>
+
+            <div class="pub-item">Singh, M., Dutta, J., Sreeraj, S. J., <strong>Sankar, V.</strong>, Srinivasan, B., Theagarajan, L. N., & Venkitesh, D. (2024, March). Device dependent distortion correction in time-stretch photonic analog to digital converters using deep neural networks. In Optical Fiber Communication Conference (pp. M4C-6). Optica Publishing Group.</div>
+
+            <div class="pub-item"><strong>Viswanathan Sankar</strong>, S.Maji, Linslal C.L., Sooraj M.S., B. Srinivasan. Nested Loop Phase Control Algorithm for Hybrid Coherent Beam Combining: Simulation and Experimental Validation. In Frontiers in Optics and Laser Science 2023, Optica.</div>
+
+            <div class="pub-item"><strong>Viswanathan Sankar</strong>, S.Maji, Linslal C.L., Sooraj M.S., B. Srinivasan. Reinforcement Learning Based Phase Control for Hexagonal Tiled Aperture Beam Combining. In conference on Photonics and Quantum Optics (IIT Roorkee), 2022.</div>
+
+            <div class="pub-item"><strong>Viswanathan Sankar</strong>, S.Maji, Linslal C.L., Sooraj M.S., Deepa Venkitesh, B. Srinivasan. Investigation of Pointing Error Tolerance of Fermat Spiral Array-based Coherent Beam Combining. In Frontiers in Optics and Laser Science 2022, Optica.</div>
+
+            <div class="pub-item">C. L. Linslal, S. Maji, M. S. Sooraj, <strong>V. Sankar</strong>, D. Venkitesh, and B. Srinivasan. Investigations on the effect of PER mismatch on coherent beam combining. Advanced Solid State Lasers Conference, Optica 2022.</div>
+
+            <div class="pub-item">A. Datta, <strong>Sankar, Viswanathan</strong>, and B. Srinivasan. Challenges and opportunities in distributed anti-stokes raman thermometry. ISSS Journal of Micro and Smart Systems, pages 1–28, 2022.</div>
+
+            <div class="pub-item">A. Datta, V. Raj, <strong>Sankar, Viswanathan</strong>, S. Kalyani, and B. Srinivasan. Measurement accuracy enhancement with multi-event detection using the deep learning approach in raman distributed temperature sensors. Optics Express, 29(17):26745–26764, 2021.</div>
+
+            <div class="pub-item">A. Datta, <strong>Viswanathan S</strong>, and B. Srinivasan. Investigation of variation in measured temperature across different fibers in optical phase conductor cable using distributed anti-stokes raman thermometry. In Optical Fiber Sensors Conference 2020 Special Edition, page T3.82. Optica Publishing Group, 2020.</div>
         </div>
     </section>
 
@@ -128,18 +129,8 @@
         </div>
     </section>
 
-    <section>
-        <h2>Awards & Achievements</h2>
-        <ul>
-            <li>Selected for <strong>OPTICA Innovation School 2023</strong> (fully funded).</li>
-            <li>Reviewer Recognition Certificate by <strong>OPTICA</strong> (2022).</li>
-            <li>Top 5% in NPTEL Introduction to Photonics.</li>
-        </ul>
-    </section>
-
     <footer>
         <p>&copy; 2026 Viswanathan Sankar | Technical University of Denmark</p>
-        <p>Contact Reference: balajis@ee.iitm.ac.in (Prof. Balaji Srinivasan)</p>
     </footer>
 </div>
 
