@@ -11,13 +11,13 @@
         body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); background: #f4f7f6; margin: 0; }
         header { background: var(--primary); color: white; padding: 4rem 2rem; text-align: center; }
         
-        /* Enlarged Profile Image with Zoom cursor */
-        .profile-img { width: 220px; height: 220px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.2); object-fit: cover; margin-bottom: 1.5rem; background: #334455; cursor: zoom-in; transition: transform 0.3s ease; }
+        /* Enlarged Profile Image */
+        .profile-img { width: 220px; height: 220px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.2); object-fit: cover; margin-bottom: 1.5rem; background: #334455; cursor: zoom-in; transition: 0.3s; }
         .profile-img:hover { transform: scale(1.05); }
 
         /* Zoom Overlay (Lightbox) */
-        #overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 1000; justify-content: center; align-items: center; cursor: zoom-out; }
-        #overlay img { max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5); border: 3px solid white; }
+        #overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: zoom-out; }
+        #overlay img { max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.5); border: 2px solid white; }
 
         .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
         .social-btn { display: inline-flex; align-items: center; background: rgba(255,255,255,0.1); color: white; padding: 8px 16px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: 0.3s; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.3); }
@@ -31,7 +31,8 @@
         
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px; }
         .gallery-item { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background: #fafafa; }
-        .gallery-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #eee; }
+        .gallery-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #eee; cursor: zoom-in; transition: 0.3s; }
+        .gallery-img:hover { opacity: 0.9; }
         .gallery-text { padding: 15px; font-size: 0.9rem; }
 
         .exp-item { margin-bottom: 25px; }
@@ -58,7 +59,7 @@
 <header>
     <img src="profile2.jpeg" alt="Viswanathan Sankar" class="profile-img" onclick="openZoom(this.src)">
     <h1>Viswanathan Sankar</h1>
-    [cite_start]<p style="font-size: 1.2rem; opacity: 0.9; margin: 10px 0;">Doctoral Researcher at Technical University of Denmark [cite: 1, 3]</p>
+    <p style="font-size: 1.2rem; opacity: 0.9; margin: 10px 0;">Doctoral Researcher at Technical University of Denmark</p>
     <div class="social-links">
         <a href="https://scholar.google.com/citations?user=SgSM_XMAAAAJ&hl=en" target="_blank" class="social-btn scholar"><i class="ai ai-google-scholar"></i> Scholar</a>
         <a href="https://orcid.org/0000-0002-0394-4985" target="_blank" class="social-btn orcid"><i class="ai ai-orcid"></i> ORCID</a>
@@ -71,7 +72,7 @@
     <section>
         <h2>About Me</h2>
         <p style="text-align: justify;">
-            [cite_start]I am a Doctoral Researcher at the <strong>Technical University of Denmark (DTU)</strong>[cite: 3]. [cite_start]My research focuses on <strong>Machine Learning based frequency comb generation in Micro-Ring Resonators</strong>[cite: 4]. [cite_start]Previously, I served as a Junior Research Fellow at <strong>DRDO CHESS</strong> [cite: 52, 53][cite_start], where I developed Reinforcement Learning frameworks for high-power laser systems[cite: 55]. [cite_start]I am passionate about applying advanced AI architectures to solve complex scientific and physical problems[cite: 16].
+            I am a Doctoral Researcher at the <strong>Technical University of Denmark (DTU)</strong> within the Department of Photonics. My research expertise lies at the intersection of Photonics and Machine Learning, specifically focusing on frequency comb generation in Micro-Ring Resonators.
         </p>
     </section>
 
@@ -79,19 +80,17 @@
         <h2>Oral Presentations</h2>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="ipc.jpeg" alt="IPC 2025 Singapore" class="gallery-img">
+                <img src="ipc.jpeg" alt="IPC 2025" class="gallery-img" onclick="openZoom(this.src)">
                 <div class="gallery-text">
                     <strong>IEEE Photonics Conference (IPC) 2025</strong><br>
-                    Singapore, Singapore<br>
-                    <em>Reinforcement Learning for Soliton Generation in Micro-Ring Resonators</em>
+                    Singapore | Reinforcement Learning for Soliton Generation
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="spie.jpeg" alt="Photonics West 2026 San Francisco" class="gallery-img">
+                <img src="spie.jpeg" alt="Photonics West 2026" class="gallery-img" onclick="openZoom(this.src)">
                 <div class="gallery-text">
                     <strong>SPIE Photonics West 2026</strong><br>
-                    San Francisco, USA<br>
-                    <em>Machine Learning based frequency comb generation in Micro-Ring Resonators</em>
+                    San Francisco | Machine Learning for Frequency Comb Modelling
                 </div>
             </div>
         </div>
@@ -101,91 +100,50 @@
         <h2>Experience</h2>
         <div class="exp-item">
             <div class="exp-header"><span>Research Assistant</span><span>July 2024 - June 2025</span></div>
-            <div class="exp-sub"><span>Technical University of Denmark</span><span>Lyngby, Copenhagen</span></div>
-            [cite_start]<p>Working on application of Machine Learning for Micro-resonator based frequency comb modelling[cite: 48, 50, 51].</p>
+            <div class="exp-sub"><span>Technical University of Denmark</span><span>Lyngby, Denmark</span></div>
+            <p>Working on application of Machine Learning for Micro-resonator based frequency comb modelling.</p>
         </div>
-
         <div class="exp-item">
             <div class="exp-header"><span>Junior Research Fellow</span><span>July 2021 - June 2024</span></div>
             <div class="exp-sub"><span>DRDO CHESS</span><span>Hyderabad, India</span></div>
             <ul>
-                [cite_start]<li>Model a Reinforcement Learning based phase control algorithm for Coherent Beam Combining in a Tiled Aperture Configuration[cite: 52, 54, 55].</li>
-                [cite_start]<li>Develop a custom GUI to measure beam pointing error in real-time and measure its effects on the combining efficiency[cite: 56].</li>
-            </ul>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header"><span>Teaching Assistant</span><span>June 2021 - Oct 2021</span></div>
-            <div class="exp-sub"><span>NPTEL / IIT Madras</span><span>India</span></div>
-            [cite_start]<p>Teaching Assistant for Introduction to Photonics Course[cite: 57, 58, 59].</p>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header"><span>Research Intern</span><span>Aug 2019 - May 2020</span></div>
-            <div class="exp-sub"><span>IIT Madras</span><span>Chennai, India</span></div>
-            <ul>
-                [cite_start]<li>Worked on Deep Learning Algorithms for extraction of clean temperature data from smart power grid applications[cite: 65, 69, 70].</li>
-                [cite_start]<li>Finite Element Analysis of current induced thermal distribution using COMSOL Multiphysics[cite: 71].</li>
+                <li>Modelled a Reinforcement Learning based phase control algorithm for Coherent Beam Combining.</li>
+                <li>Developed custom GUI to measure beam pointing error in real-time.</li>
             </ul>
         </div>
     </section>
 
     <section>
         <h2>Education</h2>
-        <div class="card"><strong>PhD, Photonics</strong> | Technical University of Denmark | [cite_start]2025 – 2028 [cite: 3, 6]</div>
-        <div class="card"><strong>M.S., Electrical Engineering</strong> | IIT Madras | 2021 – 2024 | [cite_start]CGPA: 9.13/10.0 [cite: 5, 7, 10]</div>
-        <div class="card"><strong>B.Eng, ECE</strong> | Anna University | 2016 – 2020 | [cite_start]CGPA: 8.05/10.0 [cite: 11, 13]</div>
-        [cite_start]<p><strong>Relevant Coursework:</strong> Reinforcement Learning, Pattern Recognition & ML, Linear Algebra & Random process, Introduction to Photonics, Optical Sensors[cite: 8].</p>
+        <div class="card"><strong>PhD, Photonics</strong> | DTU | 2025 – 2028</div>
+        <div class="card"><strong>M.S., Electrical Engineering</strong> | IIT Madras | 2021 – 2024 | CGPA: 9.13/10.0</div>
+        <div class="card"><strong>B.Eng, ECE</strong> | Anna University | 2016 – 2020</div>
     </section>
 
     <section>
         <h2>Publications</h2>
         <div class="pub-scroll-container">
-            <div class="pub-item"><strong>V. [cite_start]Sankar</strong>, C. Peucheret and D. Zibar, "Reinforcement Learning for Soliton Generation in Micro-Ring Resonators," 2025 IEEE Photonics Conference (IPC), Singapore, Singapore, 2025, pp. 1-2, doi: 10.1109/IPC65510.2025.11282300[cite: 18].</div>
-            <div class="pub-item">Sooraj, M. S., Maji, S., Bharadwaj, A., <strong>Sankar, V.</strong>, & Srinivasan, B. (2025). Off-center feedback-based phase synchronization for tiled array coherent beam combination. [cite_start]Optics & Laser Technology, 192, 113759[cite: 19, 20].</div>
-            <div class="pub-item">Maji, S., <strong>Sankar, V.</strong>, Sooraj, M. S., Linslal, C. L., Bharadwaj, A., & Srinivasan, B. (2025). Investigation on the effect of transverse phase error in tiled-array based coherent beam combining. [cite_start]Optics & Laser Technology, 185, 112429[cite: 21, 22].</div>
-            <div class="pub-item">Maji, S., <strong>Sankar, V.</strong>, Linslal, C. L., Sooraj, M. S., & Srinivasan, B. (2024, August). Experimental Validation of Beam Pointing Error in Tiled-Array Coherent Beam Combining. In CLEO-PR (pp. 1-4). [cite_start]IEEE[cite: 23, 24, 25].</div>
-            <div class="pub-item">Sooraj, M. S., Maji, S., <strong>Sankar, V.</strong>, Linslal, C. L., Venkitesh, D., & Srinivasan, B. (2024, May). Dual Stage Nested Loop Configuration for Scalable Coherent Beam Combination. [cite_start]In CLEO: Applications and Technology (pp. JTu2A-23)[cite: 26, 27, 28].</div>
-            <div class="pub-item">Singh, M., Dutta, J., Sreeraj, S. J., <strong>Sankar, V.</strong>, et al. (2024, March). Device dependent distortion correction in time-stretch photonic ADCs using DNNs. [cite_start]In OFC (pp. M4C-6)[cite: 29, 30, 31].</div>
-            <div class="pub-item"><strong>Viswanathan Sankar</strong>, S.Maji, Linslal C.L., Sooraj M.S., B. Srinivasan. Nested Loop Phase Control Algorithm for Hybrid Coherent Beam Combining. [cite_start]In Frontiers in Optics, 2023[cite: 32, 33].</div>
-            <div class="pub-item"><strong>Viswanathan Sankar</strong>, S.Maji, Linslal C.L., Sooraj M.S., B. Srinivasan. RL Based Phase Control for Hexagonal Tiled Aperture Beam Combining. [cite_start]In Photonics and Quantum Optics (IIT Roorkee), 2022[cite: 34, 35].</div>
-            <div class="pub-item"><strong>Viswanathan Sankar</strong>, et al. Investigation of Pointing Error Tolerance of Fermat Spiral Array-based Coherent Beam Combining. [cite_start]In Frontiers in Optics, 2022[cite: 36, 37, 38].</div>
-            <div class="pub-item">C. L. Linslal, S. Maji, M. S. Sooraj, <strong>V. Sankar</strong>, et al. Effect of PER mismatch on coherent beam combining. [cite_start]Advanced Solid State Lasers Conference, 2022[cite: 39, 40].</div>
-            <div class="pub-item">A. Datta, <strong>Sankar, Viswanathan</strong>, and B. Srinivasan. Distributed anti-stokes raman thermometry. [cite_start]ISSS Journal of Micro and Smart Systems, pp. 1–28, 2022[cite: 41, 42].</div>
-            <div class="pub-item">A. Datta, V. Raj, <strong>Sankar, Viswanathan</strong>, et al. Multi-event detection using deep learning in raman DTS. [cite_start]Optics Express, 29(17):26745–26764, 2021[cite: 43, 44].</div>
-            <div class="pub-item">A. Datta, <strong>Viswanathan S</strong>, and B. Srinivasan. Variation in measured temperature across different fibers in OPC cable. [cite_start]In OFS Conference, 2020[cite: 45, 46].</div>
+            <div class="pub-item"><strong>V. Sankar</strong>, C. Peucheret and D. Zibar, "Reinforcement Learning for Soliton Generation in Micro-Ring Resonators," 2025 IEEE Photonics Conference (IPC), Singapore, Singapore, 2025.</div>
+            <div class="pub-item">Sooraj, M. S., Maji, S., Bharadwaj, A., <strong>Sankar, V.</strong>, & Srinivasan, B. (2025). Off-center feedback-based phase synchronization for tiled array coherent beam combination. Optics & Laser Technology, 192.</div>
+            <div class="pub-item">Maji, S., <strong>Sankar, V.</strong>, Sooraj, M. S., Linslal, C. L., Bharadwaj, A., & Srinivasan, B. (2025). Investigation on the effect of transverse phase error in tiled-array based coherent beam combining. Optics & Laser Technology, 185.</div>
+            <div class="pub-item">Maji, S., <strong>Sankar, V.</strong>, Linslal, C. L., Sooraj, M. S., & Srinivasan, B. (2024, August). Experimental Validation of Beam Pointing Error in Tiled-Array Coherent Beam Combining. In 2024 CLEO-PR.</div>
+            <div class="pub-item"><strong>Viswanathan Sankar</strong>, S.Maji, Linslal C.L., Sooraj M.S., B. Srinivasan. Nested Loop Phase Control Algorithm for Hybrid Coherent Beam Combining. In Frontiers in Optics 2023.</div>
+            <div class="pub-item">A. Datta, V. Raj, <strong>Sankar, Viswanathan</strong>, et al. Measurement accuracy enhancement with multi-event detection using deep learning in raman DTS. Optics Express, 2021.</div>
         </div>
     </section>
 
     <section>
         <h2>Technical Expertise</h2>
         <div>
-            [cite_start]<span class="skills-tag">Python</span><span class="skills-tag">PyTorch</span><span class="skills-tag">JAX</span><span class="skills-tag">MATLAB</span><span class="skills-tag">COMSOL</span><span class="skills-tag">NI DAQmx</span><span class="skills-tag">Deep RL</span><span class="skills-tag">WandB</span><span class="skills-tag">TensorFlow</span> [cite: 77, 78]
+            <span class="skills-tag">Python</span><span class="skills-tag">PyTorch</span><span class="skills-tag">JAX</span><span class="skills-tag">MATLAB</span><span class="skills-tag">COMSOL</span><span class="skills-tag">Deep RL</span>
         </div>
-    </section>
-
-    <section>
-        <h2>Awards & Achievements</h2>
-        <ul>
-            [cite_start]<li>Selected for <strong>OPTICA Innovation School 2023</strong> (fully funded)[cite: 72, 73].</li>
-            [cite_start]<li>Reviewer Recognition Certificate by <strong>OPTICA</strong> (2022)[cite: 74].</li>
-            [cite_start]<li>Among the top 5% in the Online NPTEL course on Introduction to Photonics[cite: 72, 75].</li>
-        </ul>
     </section>
 
     <section>
         <h2>References</h2>
         <div class="ref-grid">
-            <div>
-                <strong>Dr. Balaji Srinivasan</strong><br>
-                Professor, Dept. of Electrical Engineering<br>
-                [cite_start]IIT Madras, India [cite: 80, 81]
-            </div>
-            <div>
-                <strong>Dr. B. Ravindran</strong><br>
-                Professor Dept. of Computer Science and Engineering<br>
-                [cite_start]Head, Robert Bosch Center (RBCDSAI), IIT Madras [cite: 82, 83, 84]
-            </div>
+            <div><strong>Dr. Balaji Srinivasan</strong><br>Professor, IIT Madras<br>balajis@ee.iitm.ac.in</div>
+            <div><strong>Dr. B. Ravindran</strong><br>Head, Robert Bosch Center, IITM<br>ravi@cse.iitm.ac.in</div>
         </div>
     </section>
 
@@ -199,7 +157,6 @@
         document.getElementById('zoomed-img').src = imgSrc;
         document.getElementById('overlay').style.display = 'flex';
     }
-
     function closeZoom() {
         document.getElementById('overlay').style.display = 'none';
     }
